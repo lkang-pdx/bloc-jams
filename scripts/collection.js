@@ -25,3 +25,5 @@
          collectionContainer.innerHTML += collectionItemTemplate;
      }
  }
+ 
+ //Check

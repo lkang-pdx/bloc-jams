@@ -36,7 +36,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      var clickHandler = function() {
 
         var songNumber = parseInt($(this).attr('data-song-number'));
-
+         console.log(songNumber);
         if (currentlyPlayingSongNumber !== null) {
             // Revert to song number for currently playing song because user started playing new song.
             var currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
@@ -77,8 +77,8 @@ var createSongRow = function(songNumber, songName, songLength) {
      };
      var offHover = function(event) {
         var songNumberCell = $(this).find('.song-item-number');
-        var songNumber = parseInt($(this).attr('data-song-number'));
-
+        var songNumber = parseInt(songNumberCell.attr('data-song-number'));
+         
         if (songNumber !== currentlyPlayingSongNumber) {
             songNumberCell.html(songNumber);
         }
